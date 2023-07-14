@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <title>Stroke Prediction</title>
+    <style>
+      body {
+        background-color: rgb(255, 255, 255);
+      }
+      input[type="text"],
+      select,
+      input[type="number"] {
+        /* width: 50%; */
+        padding: 12px 20px;
+        margin: 8px;
+        border: 1px solid rgb(0, 107, 183);
+        border-radius: 10px;
+        box-sizing: border-box;
+        outline: none;
+        font-size: 20;
+      }
+      input[type="submit"] {
+        /* width: 50%; */
+        padding: 12px 20px;
+        margin: 8px;
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(0, 107, 183);
+        color: white;
+        font-size: 20px;
+        outline: none;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: rgb(0, 107, 183);
+        opacity: 0.8;
+      }
+      label {
+        font-size: 30px;
+        margin: 8px;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div
+      style="font-size: 30px; text-align: center; padding: 10px; margin: 10px"
+    >
+      <h1>Stroke Risk Prediction</h1>
+      <form action="/predict" method="POST">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" /><br />
+
+        <label for="hypertension">Hypertension:</label>
+        <select id="hypertension" name="hypertension">
+          <option value="0">NO</option>
+          <option value="1">YES</option></select
+        ><br />
+
+        <label for="heart_disease">Heart Disease:</label>
+        <select id="heart_disease" name="heart_disease">
+          <option value="0">NO</option>
+          <option value="1">YES</option></select
+        ><br />
+
+        <label for="ever_married">Marital Status:</label>
+        <select id="ever_married" name="ever_married">
+          <option value="0">Married</option>
+          <option value="1">No Married</option></select
+        ><br />
+
+        <label for="avg_glucose_level">Average Glucose Level:</label>
+        <input
+          type="number"
+          id="avg_glucose_level"
+          name="avg_glucose_level"
+        /><br />
+
+        <label for="bmi">BMI:</label>
+        <input type="number" id="bmi" name="bmi" /><br />
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option></select
+        ><br />
+
+        <label for="work_type">Work Type:</label>
+        <select id="work_type" name="work_type">
+          <option value="government">Government</option>
+          <option value="private">Private</option>
+          <option value="self-employed">Self-Employed</option>
+          <option value="children">Children</option>
+          <option value="never-worked">Never Worked</option></select
+        ><br />
+
+        <label for="residence_type">Residence Type:</label>
+        <select id="residence_type" name="residence_type">
+          <option value="urban">Urban</option>
+          <option value="rural">Rural</option></select
+        ><br />
+
+        <label for="smoking_status">Smoking Status:</label>
+        <select id="smoking_status" name="smoking_status">
+          <option value="formerly smoked">Formerly Smoked</option>
+          <option value="never smoked">Never Smoked</option>
+          <option value="smokes">Smokes</option></select
+        ><br />
+
+        <input
+          type="submit"
+          value="Predict"
+          style="
+            width: 200px;
+            height: 70px;
+            border: none;
+            border-radius: 20px;
+            background-color: rgb(0, 107, 183);
+            padding: 20px;
+            margin: 20px;
+            font-size: 30px;
+            outline: none;
+            text-align: center;
+            box-shadow: none;
+          "
+        />
+      </form>
+    </div>
+  </body>
+</html>
